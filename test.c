@@ -41,7 +41,7 @@ int main()
     strftime(buff,64,"%F %T",tv_sec_time);
     printf("%s.%u\n",buff,now_time.tv_usec);
 }
-#endif
+
 
 int main(){
 	FILE* 	fp;
@@ -53,4 +53,40 @@ int main(){
 	c = fgetc(fp);
 	printf("%c",c);
 	
+}
+
+
+
+
+int main()
+{
+
+    char a[10];
+    int i = 0;
+    
+  
+    while(1)
+    {
+        a[i] = fgetc(stdin);
+        fgetc(stdin);
+        i++;
+        if(i>=10)
+        {
+            break;
+        }
+    }
+    printf("%s",a);
+
+}
+
+#endif
+
+int main()
+{
+    char*  a[2];
+    a[0] = "test1";
+    a[1] = "test2";
+
+    printf("%p %p %p %p %p\n",a,(char*)a + 1,(void*)a+1,(int*)a+1,(int)a+1);
+
 }

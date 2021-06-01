@@ -12,6 +12,5 @@ int main(void)
 	if(chmod("test",stat_buff.st_mode | S_ISGID | S_ISUID | S_ISVTX) < 0)
 		printf("chmod error");
 	exit(0);
-
 }
 
